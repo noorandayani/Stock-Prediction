@@ -234,8 +234,8 @@
           <h1 class="title">Rangkum Key Message Video CEO Direction</h1>
           <p class="subtitle">
             Saksikan video CEO Direction, kemudian tuliskan key message yang Anda pahami dari pesan tersebut. 🚢✨
-            🎁 Lima peserta beruntung akan mendapatkan merchandise menarik dari perusahaan.
           </p>
+          <p>🎁 Lima peserta beruntung akan mendapatkan merchandise menarik dari perusahaan.</p>
         </div>
         <div class="badge">🕒 Estimasi: 10 menit</div>
       </div>
@@ -321,10 +321,10 @@
           🚀 Submit Key Message
         </button>
 
-        <div class="codeBox" id="codeBox">
+        <!-- <div class="codeBox" id="codeBox">
           <div class="note">Kode unik kamu:</div>
           <div class="code" id="codeText">-</div>
-        </div> 
+        </div>  -->
 
         <!-- <div class="note">
           Setelah submit, sistem akan menampilkan notifikasi dan kode unik.
@@ -348,7 +348,7 @@
     const toastTitle = document.getElementById("toastTitle");
     const toastMsg = document.getElementById("toastMsg");
     const codeBox = document.getElementById("codeBox");
-    const codeText = document.getElementById("codeText");
+    // const codeText = document.getElementById("codeText");
 
     function jsonResponse(obj) {
       return ContentService
@@ -398,7 +398,7 @@
         if(json.ok){
           showToast("✅ Berhasil!", json.message, "ok");
           if(json.code){
-            codeText.textContent = json.code;
+            // codeText.textContent = json.code;
             codeBox.classList.add("show");
           }
           form.reset();
@@ -415,6 +415,7 @@
   </script>
 </body>
 </html>
+
 
 
 
