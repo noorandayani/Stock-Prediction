@@ -219,29 +219,39 @@
       font-size:15px;
     }
     /* ===== Logo Header ===== */
-    .logo-bar {
+    .logo-header {
       position: fixed;
-      top: 18px;
-      left: 18px;
-      right: 18px;
+      top: 16px;
+      left: 0;
+      right: 0;
+      padding: 0 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      pointer-events: none; /* tidak ganggu klik */
-      z-index: 999;
+      z-index: 1000;
+      pointer-events: none; /* logo tidak mengganggu klik video/form */
     }
     
     .logo {
-      max-height: 42px;     /* proporsi aman & elegan */
+      max-height: 40px;     /* proporsi aman */
       width: auto;
       opacity: 0.95;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
+      filter: drop-shadow(0 3px 8px rgba(0,0,0,.35));
     }
     
-    /* Responsif mobile */
+    /* ===== Ruang Aman untuk Konten ===== */
+    .wrap {
+      margin-top: 80px;   /* INI KUNCI: konten turun, tidak tertimpa logo */
+    }
+    
+    /* ===== Mobile ===== */
     @media (max-width: 600px) {
       .logo {
-        max-height: 30px;
+        max-height: 28px;
+      }
+    
+      .wrap {
+        margin-top: 64px;
       }
     }
   </style>
@@ -442,6 +452,7 @@
   </script>
 </body>
 </html>
+
 
 
 
