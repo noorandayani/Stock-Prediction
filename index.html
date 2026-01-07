@@ -218,9 +218,40 @@
       letter-spacing:.8px;
       font-size:15px;
     }
+    /* ===== Logo Header ===== */
+    .logo-bar {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+      right: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none; /* tidak ganggu klik */
+      z-index: 999;
+    }
+    
+    .logo {
+      max-height: 42px;     /* proporsi aman & elegan */
+      width: auto;
+      opacity: 0.95;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
+    }
+    
+    /* Responsif mobile */
+    @media (max-width: 600px) {
+      .logo {
+        max-height: 30px;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Logo Header -->
+  <div class="logo-bar">
+    <img src="logo-danantara.png" alt="Danantara Indonesia" class="logo left">
+    <img src="logo-pelindo.png" alt="Pelindo" class="logo right">
+  </div>
   <div class="wrap">
     <!-- LEFT: Video & Instructions -->
     <section class="card">
@@ -411,6 +442,7 @@
   </script>
 </body>
 </html>
+
 
 
 
